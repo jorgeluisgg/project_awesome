@@ -1,4 +1,13 @@
+*.egg-info
+.coverage
+.ipynb_checkpoints
+.DS_Store
 raw_data/
-MA_Cleaning_data_first_try.ipynb
-MA_Cleaning_Preprocess_data.ipynb
-
+data/raw
+data/processed
+*.csv
+**/__pycache__/
+.env
+audio_samples/
+.envrc
+.env.yaml
