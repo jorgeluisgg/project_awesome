@@ -9,3 +9,8 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+
+# API
+fastapi
+uvicorn
+docker
