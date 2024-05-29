@@ -1,2 +1,16 @@
-pandas
+
 yfinance
+pytest
+pylint
+ipdb
+jupyterlab
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+
+# API
+fastapi
+uvicorn
+docker
