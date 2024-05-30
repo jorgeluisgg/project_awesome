@@ -10,12 +10,14 @@ def root():
     Root endpoint that provides a welcome message and basic information.
     """
     return {
-    'greeting': 'Hello suckers!'
+    'greeting': 'Hello friends!'
     }
 
 
 @app.get("/classify")
 def classify(ticker: str = 'NPI'):
+
+    
     return {"classify":
         f"Everything is shit! Just sell {ticker} already, take the money under your mattress and start buying farm animals and seeds"
         }
