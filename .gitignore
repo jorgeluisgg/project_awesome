@@ -1,1 +1,13 @@
+*.egg-info
+.coverage
+.ipynb_checkpoints
+.DS_Store
 raw_data/
+data/raw
+data/processed
+*.csv
+**/__pycache__/
+.env
+audio_samples/
+.envrc
+.env.yaml
