@@ -4,8 +4,7 @@
 .DS_Store
 raw_data/
 data/raw
-data/processed
-*.csv
+notebooks/features.csv
 **/__pycache__/
 .env
 audio_samples/
