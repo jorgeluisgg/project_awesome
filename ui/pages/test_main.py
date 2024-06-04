@@ -1,6 +1,5 @@
 import streamlit as st
 
-import numpy as np
 import pandas as pd
 import seaborn as sns
 import requests
@@ -53,3 +52,25 @@ df_drop_transposed = df_drop.T
 # show line chart
 st.title('Stock Ratio Over Years')
 st.line_chart(df_drop_transposed)
+
+
+import streamlit as st
+import requests
+
+# define base URL
+url = 'https://lw-project-image-g4ikxb6kuq-ew.a.run.app/classify?'
+
+# Allow the user to input ticker symbols
+tickers = st.text_input('Enter ticker symbols separated by commas:', 'AAPL, GOOG')
+
+# Convert the input string to a list
+ticker_list = [ticker.strip() for ticker in tickers.split(',')]
+
+# Set up parameters for the API request
+params = {'ticker': ticker_list}
+
+# Make the API request
+response = requests.get(url, params=params)
+
+# Display the response
+st.write(response.json())

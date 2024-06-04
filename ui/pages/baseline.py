@@ -90,20 +90,22 @@ st.line_chart(df_drop_transposed)
 
 
 
+import streamlit as st
+import pandas as pd
 import altair as alt
 
 # Sample DataFrame with only one column
-#data = {
-#    'name': ['A', 'B', 'C', 'D', 'E']
-#}
-#df = pd.DataFrame(data)
+data = {
+    'name': ['A', 'B', 'C', 'D', 'E']
+}
+df = pd.DataFrame(data)
 
 # Define the baseline value
 baseline_value = 1
 
 # Create a line chart with Altair
-line_chart = alt.Chart(df_drop_transposed).mark_point().encode(
-    x=df_drop_transposed,
+line_chart = alt.Chart(df).mark_point().encode(
+    x='name:N',
     y=alt.value(baseline_value),
 ).properties(
     width=600,

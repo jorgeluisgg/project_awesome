@@ -53,7 +53,7 @@ def highlight_age(value):
         return 'color: red'
 
 # Slider to select a number of lines to display in the DataFrame
-line_count = st.slider('Select a line count', 1, 100, 3)
+line_count = st.number_input("Pick a number", 0,5060)
 
 head_df = filtered_df_1.head(line_count)
 
