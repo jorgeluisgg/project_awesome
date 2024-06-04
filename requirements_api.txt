@@ -3,3 +3,5 @@
 fastapi
 uvicorn
 docker
+yfinance
+pandas
