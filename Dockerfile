@@ -5,6 +5,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY project_awesome/api /project_awesome/api
+COPY process_data /process_data
 # COPY model.joblib / model.joblib
 
 CMD uvicorn project_awesome.api.fast:app --host 0.0.0.0 --port $PORT
