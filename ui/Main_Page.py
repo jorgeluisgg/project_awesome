@@ -50,7 +50,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Apply filters
-filtered_df = df
+filtered_df = df#.rename(columns={
+    # '2024 Ratio Stock/S&P500': '2024 Ratio',
+    # '2023 Ratio Stock/S&P500': '2023 Ratio',
+    # '2022 Ratio Stock/S&P500': '2022 Ratio',
+    # '2021 Ratio Stock/S&P500': '2021 Ratio',
+    # '2020 Ratio Stock/S&P500': '2020 Ratio'})
 # Sidebar filters
 with st.sidebar:
     st.title('Filters')
@@ -95,6 +100,16 @@ st.write(styled_df)
 st.subheader('Stock Ratio Over Years')
 
 df_drop = head_df.drop(columns=['Name', 'Last Sale', 'Market Cap', 'Sector', 'Industry', 'Recommendation'])
+
+
+#
+df_drop.rename(columns={
+    '2024 Ratio Stock/S&P500': '2024 Ratio',
+    '2023 Ratio Stock/S&P500': '2023 Ratio',
+    '2022 Ratio Stock/S&P500': '2022 Ratio',
+    '2021 Ratio Stock/S&P500': '2021 Ratio',
+    '2020 Ratio Stock/S&P500': '2020 Ratio'}, inplace=True)
+
 df_drop_transposed = df_drop.T
 st.line_chart(df_drop_transposed)
 
