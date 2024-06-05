@@ -6,13 +6,16 @@ import seaborn as sns
 import requests
 import matplotlib.pyplot as plt
 from test_pred import get_pred_goog, plot_forecast
+import os
 
 # header + description
 st.markdown("""# Project Awesome: Overview
 List your companies by applying the necessary filters.""")
 
 # pull the csv file
-data = pd.read_csv('../process_data/raw_data_ui.csv')
+file_path = os.path.abspath(os.path.dirname(__file__))
+data_path = os.path.join(file_path,'..','process_data')
+data = pd.read_csv(os.path.join(data_path,'raw_data_ui.csv'))
 
 # converting data into a df
 df = pd.DataFrame(data)
