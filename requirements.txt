@@ -8,8 +8,15 @@ numpy
 pandas
 matplotlib
 seaborn
+
+# USER INTERFACE
 streamlit
+
+# MODEL
 scikit-learn
+statsmodels
+pmdarima
+tqdm
 
 # API
 fastapi

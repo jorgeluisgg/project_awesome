@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import requests
+import os
 
 st.title('Company Finder')
 
@@ -11,7 +12,9 @@ st.title('Company Finder')
 search_query = st.text_input('Enter search query:')
 
 # pull the csv file
-data = pd.read_csv('../raw_data/raw_data_ui.csv')
+file_path = os.path.abspath(os.path.dirname(__file__))
+data_path = os.path.join(file_path,'..','..','process_data')
+data = pd.read_csv(os.path.join(data_path,'raw_data_ui.csv'))
 
 # converting data into a df
 df = pd.DataFrame(data)
