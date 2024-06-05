@@ -1,0 +1,9 @@
+
+.stApp {
+  background:
+        linear-gradient(150deg, #5a5cde, transparent 60%),
+        linear-gradient(330deg, #b168a6,  #0d0735, #39091e, transparent 80%),
+        linear-gradient(50deg, hsl(249, 39%, 6%), #758bc4, transparent 60%),
+        linear-gradient(225deg, #2b0112, #4b6ec7, #432a1b, #7f4aa8);
+  background-size: cover;
+}
