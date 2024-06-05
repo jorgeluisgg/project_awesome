@@ -10,7 +10,7 @@ st.markdown("""# Project Awesome: Overview
 List your companies by applying the necessary filters.""")
 
 # pull the csv file
-data = pd.read_csv('../raw_data/raw_data_ui.csv')
+data = pd.read_csv('../process_data/raw_data_ui.csv')
 
 # converting data into a df
 df = pd.DataFrame(data)
