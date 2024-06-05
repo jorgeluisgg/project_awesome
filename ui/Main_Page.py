@@ -5,10 +5,13 @@ import seaborn as sns
 import os
 import matplotlib.pyplot as plt
 from test_pred import get_pred_goog, plot_forecast
+import os
 
 # Styling function
 def apply_styles(df):
     return df.style.applymap(highlight_age, subset=['2024 Ratio Stock/S&P500'])
+
+# # header + description
 
 # Highlighting function
 def highlight_age(value):
@@ -18,6 +21,40 @@ def highlight_age(value):
         return 'color: yellow'
     else:
         return 'color: red'
+# st.markdown("""# Project Awesome: Overview
+# List your companies by applying the necessary filters.""")
+
+# pull the csv file
+file_path = os.path.abspath(os.path.dirname(__file__))
+data_path = os.path.join(file_path,'..','process_data')
+data = pd.read_csv(os.path.join(data_path,'raw_data_ui.csv'))
+
+# converting data into a df
+df = pd.DataFrame(data)
+
+# set ticker as index
+df = df.set_index('Ticker')
+
+# # create a multiselect filter for the 'Classification' column
+# selected_classifications = st.multiselect('Select 2024 Ratio Stock/S&P500', df['Recommendation'].unique())
+
+# # filter the df based on the selected classifications
+# if selected_classifications:
+#     filtered_df = df[df['Recommendation'].isin(selected_classifications)]
+# else:
+#     filtered_df = df
+
+# # create a multiselect filter for the 'Industry' column
+# selected_industries = st.multiselect('Select Sectors', filtered_df['Sector'].unique())
+
+# # filter the df based on the selected classifications
+# if selected_industries:
+#     filtered_df_1 = filtered_df[filtered_df['Sector'].isin(selected_industries)]
+# else:
+#     filtered_df_1 = filtered_df
+
+
+
 
 # Set CSS styling
 css_path = os.path.join('style.css')
@@ -33,12 +70,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Load data
-data = pd.read_csv('../raw_data/raw_data_ui.csv')
-df = pd.DataFrame(data)
+# # Load data
+# data = pd.read_csv('../raw_data/raw_data_ui.csv')
+# df = pd.DataFrame(data)
 
-# Set ticker as index
-df = df.set_index('Ticker')
+# # Set ticker as index
+# df = df.set_index('Ticker')
 
 # Sidebar filters
 with st.sidebar:
