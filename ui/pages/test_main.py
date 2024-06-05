@@ -54,8 +54,6 @@ st.title('Stock Ratio Over Years')
 st.line_chart(df_drop_transposed)
 
 
-import streamlit as st
-import requests
 
 # define base URL
 url = 'https://lw-project-image-g4ikxb6kuq-ew.a.run.app/classify?'

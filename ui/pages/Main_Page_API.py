@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import requests
 
+
 # header + description
 st.markdown("""# Project Awesome: Overview
 List your companies by applying the necessary filters.""")
@@ -65,3 +66,5 @@ styled_df = apply_styles(head_df)
 
 # show styled df
 st.dataframe(styled_df)
+
+
