@@ -1,0 +1,11 @@
+yfinance
+pytest
+pylint
+numpy
+pandas
+matplotlib
+
+
+# USER INTERFACE
+streamlit
+seaborn
