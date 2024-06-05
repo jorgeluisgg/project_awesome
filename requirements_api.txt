@@ -5,3 +5,6 @@ uvicorn
 docker
 yfinance
 pandas
+matplotlib
+statsmodels
+pmdarima
