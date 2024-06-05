@@ -37,7 +37,7 @@ df = pd.DataFrame(data)
 df = df.set_index('Ticker')
 # Set CSS styling
 
-css_path = os.path.join('style.css')
+css_path = os.path.join(file_path,'style.css')
 with open(css_path) as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
