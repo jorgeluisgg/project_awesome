@@ -4,6 +4,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import requests
+import matplotlib.pyplot as plt
+from test_pred import get_pred_goog, plot_forecast
 
 # header + description
 st.markdown("""# Project Awesome: Overview
@@ -71,3 +73,6 @@ df_drop_transposed = df_drop.T
 # show line chart
 st.title('Stock Ratio Over Years')
 st.line_chart(df_drop_transposed)
+if st.button('Display google stock price prediction'):
+    a, b, c, d, e = get_pred_goog()
+    st.pyplot(plot_forecast(a,b,c,d,e))
